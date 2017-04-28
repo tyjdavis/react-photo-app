@@ -5,12 +5,12 @@ import {
   Link
 } from 'react-router-dom'
 
-class Main extends Component {
+class Home extends Component {
 
 
   render() {
     return(
-      <div className="Albums">
+      <div className="albums">
       <section className="row">
         <Link className="col s4" to="album1">
           <img className="responsive-img" src="/images/paul-morris.jpg"/>
@@ -44,4 +44,4 @@ class Main extends Component {
     }
 }
 
-export default Main
+export default Home

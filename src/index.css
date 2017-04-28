@@ -1,7 +1,18 @@
-.header {
+.nav-extended {
+  background-color: lightgray;
+  opacity: 0.8;
   text-align: center;
+  color: black;
 }
 
 .col {
   text-align: center;
+}
+
+.container {
+  border-radius: 10px;
+}
+
+.albums {
+  margin: 30px;
 }

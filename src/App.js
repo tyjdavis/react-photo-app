@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 import Header from './Header';
-import Main from './Main';
+import Home from './Home';
 import Footer from './Footer';
 import Album from './Album';
 import Aside from './Aside';
@@ -19,9 +19,9 @@ class App extends Component {
             <Header
 
             />
-            <Main
-
-            />
+            <br />
+            <Route exact path="/" component={Home}/>
+            <Route path="/:album?" component={Album}/>
         </section>
       </Router>
     );
