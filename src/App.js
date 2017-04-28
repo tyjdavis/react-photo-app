@@ -12,16 +12,16 @@ import Aside from './Aside';
 
 
 class App extends Component {
+
+
+
+
   render() {
     return (
       <Router>
-        <section className="container">
-            <Header
-
-            />
-            <br />
+        <section className="">
             <Route exact path="/" component={Home}/>
-            <Route path="/:album?" component={Album}/>
+            <Route path="/albums/:album?" component={Album}/>
         </section>
       </Router>
     );
