@@ -8,9 +8,6 @@ import Home from './Home';
 import Pictures from './Pictures';
 
 
-import Aside from './Aside';
-
-
 class App extends Component {
 
 
