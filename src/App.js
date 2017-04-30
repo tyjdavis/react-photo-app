@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router forceRefresh={true}>
         <section className="">
             <Route exact path="/" component={Home}/>
             <Route exact path="/albums/:pictures?" component={Pictures}/>
