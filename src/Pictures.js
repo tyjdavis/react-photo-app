@@ -96,7 +96,7 @@ closeNav() {
             <div className="nav-content">
               <span className="nav-title">Album</span>
               <a className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
-                <i className="material-icons" onClick={this.openNav.bind(this)}>Side</i>
+                <i className="material-icons" onClick={this.openNav.bind(this)}>+</i>
               </a>
             </div>
           </nav>
@@ -117,7 +117,12 @@ closeNav() {
           <section className="row">
             {picArray.map((url, index) => {
               return (
-                <div className="col s4" key={index}><img className="responsive-img materialboxed" src={url}/>Photo</div>
+                <div className="col s4" key={index}>
+                  <img className="responsive-img materialboxed z-depth-5" src={url}/>
+                  <p>
+                    Photo
+                  </p>
+                </div>
               )
             })}
           </section>
@@ -125,7 +130,12 @@ closeNav() {
           <section className="row">
             {picArray2.map((url, index) => {
               return (
-              <div className="col s4" key={index}><img className="responsive-img materialboxed" src={url}/>Photo</div>
+              <div className="col s4" key={index}>
+                <img className="responsive-img materialboxed z-depth-5" src={url}/>
+                <p>
+                  Photo
+                </p>
+              </div>
               )
             })}
           </section>
