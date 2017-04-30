@@ -11,7 +11,7 @@
   "devDependencies": {
     "react-scripts": "0.9.5",
     "surge": "^0.19.0",
-    "homepage": "http://tyjdavis.github.io/react-photo-app"
+    "homepage": "https://tyjdavis.github.io/react-photo-app/"
   },
   "scripts": {
     "start": "react-scripts start",
