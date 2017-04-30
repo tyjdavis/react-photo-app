@@ -120,7 +120,7 @@ closeNav() {
                 <div className="col s4" key={index}>
                   <img className="responsive-img materialboxed z-depth-5" src={url}/>
                   <p>
-                    Photo
+                    Photo 
                   </p>
                 </div>
               )
