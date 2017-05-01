@@ -15,6 +15,7 @@ closeNav() {
     let picArray = [];
     let picArray2 = [];
 
+
       if(this.props.match.params.pictures === 'album1') {
 
         picArray = ["https://images.unsplash.com/photo-1485546784815-e380f3297414?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=&bg=",
@@ -120,13 +121,12 @@ closeNav() {
                 <div className="col s4" key={index}>
                   <img className="responsive-img materialboxed z-depth-5" src={url}/>
                   <p>
-                    Photo 
+                    Photo
                   </p>
                 </div>
               )
             })}
           </section>
-
           <section className="row">
             {picArray2.map((url, index) => {
               return (

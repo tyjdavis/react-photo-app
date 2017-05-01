@@ -1,0 +1,62 @@
+//put this array in data.json
+[
+  { path: '/images/pic1.png',
+    header: 'whatever',
+    album: [
+      { path: '/images/pic1.png', name: 'Steve'},
+      { path: '/images/pic2.png', name: 'Jeff'},
+      { path: '/images/pic3.png', name: 'Miko'}
+    ]
+  },
+  { path: '/images/pic4.png',
+    header: 'whatever for #2',
+    album: [
+      { path: '/images/pic4.png'},
+      { path: '/images/pic5.png'},
+      { path: '/images/pic6.png'}
+    ]
+  }
+]
+
+<Route path="/" component={App}/>
+<Route path="/album/:albumId" component={Album}/>
+<Route path="/album/:albumId/pic/:picId" component={Picture}/>
+if I render /album/1/pic/2...
+
+// in App.js
+import data from './data.json'
+this.state = data
+render () {
+  return (
+    {data.map(obj, index) => {
+      <Link to={`/album/${index}`}><img src={obj.path}/>
+    }}
+  )
+}
+
+// in Album.js
+import data from './data.json'
+
+
+render () {
+  const albumId = props.match.params.albumId
+  const album = data[albumId]
+  return (
+    <div>
+    <h1>{album.header}</h1>
+    {album.map((pic, index) => {
+      return <Link to={`/album/${albumId}/pic/${index}`}><img src={pic.path} />{pic.name}</Link>
+    })}
+    </div>
+  )
+}
+
+// in Picture.js
+import data from './data.json'
+const albumObj = data[this.props.match.params.albumId]
+const pic = albumObj.album[this.props.match.params.picId]
+this.state = pic
+
+render () {
+  return <img src={this.state.path}/>
+}
